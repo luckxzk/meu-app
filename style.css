@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#pontuacao {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #ffc107;
+    transition: transform 0.3s ease;
+}
+
+#pontuacao i {
+    margin-right: 5px;
+}
+
+#pontuacao.animacao {
+    transform: scale(1.2);
+}
+
+#formulario-tarefa {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#formulario-tarefa input[type="text"],
+#formulario-tarefa select {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#formulario-tarefa input[type="text"]:focus,
+#formulario-tarefa select:focus {
+    border-color: #007bff;
+}
+
+#formulario-tarefa button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-tarefa button:hover {
+    background-color: #0056b3;
+}
+
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+}
+
+.tarefa-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.tarefa-item.concluida {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.tarefa-item span {
+    flex-grow: 1;
+}
+
+.tarefa-item div {
+    display: flex;
+}
+
+.tarefa-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.tarefa-item button:hover {
+    color: #0056b3;
+}
+
+.tarefa-item button.concluir-tarefa {
+    color: #28a745;
+}
+
+.tarefa-item button.remover-tarefa {
+    color: #dc3545;
+}
+
+.categoria-pessoal {
+    color: #007bff;
+}
+
+.categoria-trabalho {
+    color: #28a745;
+}
+
+.categoria-estudo {
+    color: #ffc107;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

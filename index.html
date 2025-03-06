@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Lista de Tarefas</h1>
+        <div id="pontuacao">
+            <i class="fas fa-star"></i> <span id="total-estrelas">0</span>
+        </div>
+        <form id="formulario-tarefa">
+            <input type="text" id="nome-tarefa" placeholder="Nome da Tarefa">
+            <select id="categoria-tarefa">
+                <option value="pessoal">Pessoal</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="estudo">Estudo</option>
+            </select>
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+        <ul id="lista-tarefas"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
