@@ -12,14 +12,13 @@ function animarEstrelas() {
     pontuacao.classList.add('animacao');
     setTimeout(() => {
         pontuacao.classList.remove('animacao');
-    }, 300);
+    }, 200);
 }
 
 function gerarCorAleatoria() {
-    // Gera cores mais saturadas e brilhantes
-    const r = Math.floor(Math.random() * 156) + 100; // 100-255
-    const g = Math.floor(Math.random() * 156) + 100; // 100-255
-    const b = Math.floor(Math.random() * 156) + 100; // 100-255
+    const r = Math.floor(Math.random() * 156) + 100;
+    const g = Math.floor(Math.random() * 156) + 100;
+    const b = Math.floor(Math.random() * 156) + 100;
     return `rgb(${r}, ${g}, ${b})`;
 }
 
